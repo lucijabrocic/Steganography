@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head >
+        <title>Steganography</title>
+        <meta charset="UTF-8" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.8/sjcl.js"> </script>
+        <p style = "background-color:white; font-family:agency fb;font-size:35px; text-align:center;" > Hiding message within the image</p>
+        <hr>
+</head>
+
+<body bgcolor="#b191bc">
+    <br>
+    <table style="width:90%; border:2px solid black; align:center; margin: 0px auto;" bgcolor="white" cellpadding="20">
+        <tr>
+            <th style="width: 30%; border:1px solid black;">
+                    <p style = "font-family:agency fb;font-size:20px;">Load your chosen image: </p> 
+                    
+                    <input type="file" id="inputImg"></input><br>
+                    <br>
+                    <canvas id="imgCanvas"></canvas><br> <br>
+            </th>
+            <th style="width: 30%; border:1px solid black;"> 
+                <div id="unosPoruke"> <p style = "font-family:agency fb;font-size:20px;">Input the message you want to hide in the image: </p> </div>
+                <textarea id="inputMsg" rows="10" cols="50"></textarea>
+                <br>
+                <button id="submitMsg">Submit Message</button>
+                <br>
+                <br>
+                <div id="ispis"></div>
+                <br>
+                
+                
+        </th>
+
+        </tr>
+        <tr> 
+            <th style="width: 30%; border:1px solid black;">
+                    <br>
+                    <p style = "font-family:agency fb;font-size:20px; text-align:center;" > Output image</p> <br>
+                                        <p style = "background-color:white; font-family:agency fb; text-align:center;"> If you have just hid the message within the image, you can click "Retrieve Message". If you wish to upload image which already has a message hidden, you can click "Upload png" and then "Retrieve message" </p>
+                                        <canvas id="outputCanvas"> </canvas>
+                <br> <br>
+                    <button id="decryptImg"> Retrieve Message</button>
+
+                    <input type="button" id="uploadPng2" value="Upload png" onclick="document.getElementById('inputImg2').click();" />
+                    <input type="file" id="inputImg2" value="Upload png" style="display:none;"></input>
+                    <br> <br>
+                    
+            
+            </th>
+        <th style="width: 30%; border:1px solid black;"> 
+                <br>
+                <p id="outputMsg" style = "background-color:white; font-family:agency fb; text-align:center;"> Output message </p></th>
+                <br>
+
+        </tr>
+    </table>    
+    
+    <br>
+
+    <script src="steganografija.js"> </script>
+    
+	 
+    
+
+</body>
+
+</html>
